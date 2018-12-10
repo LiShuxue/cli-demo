@@ -4,7 +4,7 @@
   "description": "A sample project about CLI",
   "main": "index.js",
   "bin": {
-    "cli-demo": "index.js"
+    "cli-demo": "bin/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
