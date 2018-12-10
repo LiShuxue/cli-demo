@@ -1,0 +1,14 @@
+{
+  "name": "cli-demo",
+  "version": "1.0.0",
+  "description": "A sample project about CLI",
+  "main": "index.js",
+  "bin": {
+    "cli-demo": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
