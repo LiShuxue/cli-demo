@@ -3,6 +3,7 @@
 // commander 命令行参数解析
 const program = require('commander');
 const inquirer = require('inquirer');
+const chalk = require('chalk');
 
 const interaction = function () {
     console.log('start ...');
@@ -89,4 +90,5 @@ program.parse(process.argv);
 
 if (program.test) {
     console.log(program.test);
+    console.log(chalk.blue('I am blue color !'));
 }

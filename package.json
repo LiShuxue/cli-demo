@@ -12,6 +12,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "chalk": "^2.4.1",
     "commander": "^2.19.0",
     "inquirer": "^6.2.1"
   }
