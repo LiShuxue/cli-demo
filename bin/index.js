@@ -2,8 +2,12 @@
 
 // commander 命令行参数解析
 const program = require('commander');
+// inquirer 用户交互
 const inquirer = require('inquirer');
+// 字体颜色
 const chalk = require('chalk');
+// loading spinner
+const ora = require('ora');
 
 const interaction = function () {
     console.log('start ...');
@@ -84,6 +88,37 @@ program
     .description('run the third demo, interact with the user')
     .action(function () {
         interaction();
+    })
+
+program
+    .command('demo4')
+    .description('run the fourth demo, show loading spinner')
+    .action(function() {
+        const spinner = ora('Loading').start();
+
+        setTimeout(() => {
+            spinner.succeed('Successful');
+            spinner.start();
+        }, 1000);
+
+        setTimeout(() => {
+            spinner.fail('Failed');
+            spinner.start();
+        }, 2000);
+
+        setTimeout(() => {
+            spinner.warn('Warnning');
+            spinner.start();
+        }, 3000);
+
+        setTimeout(() => {
+            spinner.info('Info');
+            spinner.start();
+        }, 4000);
+
+        setTimeout(() => {
+            spinner.stop();
+        }, 5000);
     })
 
 program.parse(process.argv);
